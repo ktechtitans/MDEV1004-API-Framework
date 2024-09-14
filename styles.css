@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #bda4a4;
+    background-color: #b15d5d;
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
@@ -21,7 +21,7 @@ body {
     width: 300px;
     font-size: 16px;
     margin-bottom: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid #000000;
     border-radius: 5px;
   }
   

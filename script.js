@@ -6,7 +6,7 @@ function init() {
     document.getElementById("searchButton").addEventListener("click", ev => {
         ev.preventDefault();
         let str = document.getElementById("searchInput").value.trim();
-        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=10&q=${str}`;
+        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=15&q=${str}`;
         console.log(url);
 
         fetch(url)
@@ -31,5 +31,14 @@ function init() {
                 console.error(err);
             });
     });
-    
+
+    document.getElementById("clearButton").addEventListener("click", ev => {
+      ev.preventDefault();
+      
+      document.getElementById("searchInput").value = '';
+      
+      let out = document.querySelector('.out');
+      out.innerHTML = ''; 
+  });
 }
+    
