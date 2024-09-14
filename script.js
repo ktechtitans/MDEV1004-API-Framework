@@ -6,7 +6,7 @@ function init() {
     document.getElementById("searchButton").addEventListener("click", ev => {
         ev.preventDefault();
         let str = document.getElementById("searchInput").value.trim();
-        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=15&q=${str}`;
+        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=12&q=${str}`;
         console.log(url);
 
         fetch(url)
