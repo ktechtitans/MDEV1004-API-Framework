@@ -1,0 +1,19 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "This is my first Express App.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktechtitans/MDEV1004-API-Framework.git"
+  },
+  "author": "Kanchan Kaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktechtitans/MDEV1004-API-Framework/issues"
+  },
+  "homepage": "https://github.com/ktechtitans/MDEV1004-API-Framework#readme"
+}
