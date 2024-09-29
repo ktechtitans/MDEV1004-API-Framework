@@ -13,7 +13,7 @@ const getRecipe = async (req, res) => {
 }
 const postrecipe = async (req, res) => {
     const { recipeName, ingredients, cookingTime, difficulty, cuisine, description, photoLink, averageRating } = req.body;
-    const newRecipe = new Recipe({
+    const newRecipe = new recipes({
         recipeName,
         ingredients,
         cookingTime,
