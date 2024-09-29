@@ -1,4 +1,11 @@
-//import 
+/**
+ * File: index.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 28-09-2024
+ */
+
+// Import libraries and modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -24,10 +31,13 @@ mongoose.connect(mongoURI,{
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
+// Use the imported routes for handling requests
 app.use('/',routes);
 
+// Define the port for the server
 const port = 3000;
 
+// Start the server and listen on the defined port
 app.listen(port, ()=>{
     console.log(`Server is running on http://localhost:${port}`)
 });
