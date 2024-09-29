@@ -2,8 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const recipeRoutes = require('./routes/recipeRoutes');
-dotenv.config({path:'./config.env'});
+const routes = require('./SRC/Route/Route');
 
 //Initialize the express app
 const app = express();
@@ -25,10 +24,7 @@ mongoose.connect(mongoURI,{
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-//Define a root route
-app.get('/',(req, res)=>{
-    res.send('Welcome to the first program of node js express');
-})
+app.use('/',routes);
 
 const port = 3000;
 

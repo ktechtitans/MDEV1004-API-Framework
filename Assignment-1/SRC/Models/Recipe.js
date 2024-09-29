@@ -12,7 +12,7 @@ const RecipeSchema = new mongoose.Schema({
     averageRating: { type: Number, required: true }   
 });
 
-const Recipe =mongoose.model(Recipe,RecipeSchema);
+const Recipe =mongoose.model("Recipe",RecipeSchema);
 module.exports = Recipe;
 
 

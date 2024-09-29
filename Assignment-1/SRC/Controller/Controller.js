@@ -1,11 +1,11 @@
-const Recipe = require ('../Models/Recipe');
+const recipes = require ('../Models/Recipe');
 
 
-const Recipe = async (req, res) => {
+const getRecipe = async (req, res) => {
     try {
-        const Recipe = await Recipe.find();
+        const RecipeData = await recipes.find();
       
-        res.status(200).json(recipes);
+        res.status(200).json(RecipeData);
     }
     catch (error) {
         res.status(500).json({ message: 'Failed to recieve recipes', error: error.message });
@@ -34,4 +34,4 @@ const postrecipe = async (req, res) => {
 }
 
 
-module.exports = {Recipes, postrecipe};
+module.exports = {getRecipe, postrecipe};
