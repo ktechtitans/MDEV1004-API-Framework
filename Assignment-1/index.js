@@ -2,6 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const recipeRoutes = require('./routes/recipeRoutes');
+dotenv.config({path:'./config.env'});
 
 //Initialize the express app
 const app = express();
