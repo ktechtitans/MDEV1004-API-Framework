@@ -1,9 +1,13 @@
-//import express
+//import 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 //Initialize the express app
 const app = express();
+
+//MongoDb Atlas connection string
+const mongoURI = 'mongodb+srv://KaurKanchan:mongodb@cluster0.v3lhx.mongodb.net/';
 
 //Middleware
 app.use(express.json());
