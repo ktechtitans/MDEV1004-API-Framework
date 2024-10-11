@@ -8,6 +8,11 @@ exports.getMovies = async (req, res) => {
 
         let searchparam = {};
 
+        if (req.query.title) {
+
+            searchparam.title = new RegExp(req.query.title, 'i');
+        }
+
     }
 };
 
