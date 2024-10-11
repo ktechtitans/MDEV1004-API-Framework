@@ -12,6 +12,10 @@ exports.getMovies = async (req, res) => {
 
             searchparam.title = new RegExp(req.query.title, 'i');
         }
+        if (req.query.genre) {
+
+            searchparam.genres = req.query.genre;
+        }
 
     }
 };
