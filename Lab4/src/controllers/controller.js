@@ -16,6 +16,10 @@ exports.getMovies = async (req, res) => {
 
             searchparam.genres = req.query.genre;
         }
+        if (req.query.year) {
+
+            searchparam.year = Number(req.query.year);
+        }
 
     }
 };
