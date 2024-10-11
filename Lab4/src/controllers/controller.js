@@ -20,6 +20,8 @@ exports.getMovies = async (req, res) => {
 
             searchparam.year = Number(req.query.year);
         }
+        
+        const movies = await Movie.find(searchparam);
 
     }
 };
