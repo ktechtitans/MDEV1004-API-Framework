@@ -1,7 +1,7 @@
 const Movie = require('../models/Movies');
 const fs =require('fs');
 
-//Function to get all the files
+//Function to get all movies with search and filter 
 
 exports.getMovies = async (req, res) => {
     try {
@@ -24,7 +24,7 @@ exports.getMovies = async (req, res) => {
         const movies = await Movie.find(searchparam);
 
         res.status(200).send(movies);
-    } catch (error) {
+         } catch (error) {
         console.error('Error fetching movies:', error);
         res.status(500).send({ message: 'Error retrieving movies' });
 
