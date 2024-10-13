@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');// Import Mongoose library for MongoDB interaction
 const Schema = mongoose.Schema;// Alias for mongoose.Schema
 
-/**
- * Recipe Schema: Defines the structure of the recipe documents in the MongoDB collection.
- */
+
 const RecipeSchema = new mongoose.Schema({
     recipeName: { type: String, required: true },
     ingredients: { type: [String], required: true }, 
