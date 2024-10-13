@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const routes = require('./SRC/Route/route');
 
 //Initialize the express app
 const app = express();
@@ -22,6 +23,9 @@ mongoose.connect(mongoURI,{
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+
+// Use the imported routes for handling requests
+app.use('/',routes);
 
 // Define the port for the server
 const port = 3000;
