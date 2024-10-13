@@ -35,6 +35,7 @@ app.use(
 
 // Use the imported routes for handling requests
 app.use('/',routes);
+app.use('/api/user', authRoutes);
 
 // Define the port for the server
 const port = 3000;
