@@ -49,3 +49,12 @@ const loginUser = async (req, res) => {
       res.status(500).send("Error occured");
     }
   };
+
+  const logoutUser = (req, res) => {
+    req.session.destroy((err) => {
+      if (err) {
+        return res.status(500).json({ message: "Error logging out user" });
+      }
+      res.status(200).json({ message: "Logout successful" });
+    });
+  };
