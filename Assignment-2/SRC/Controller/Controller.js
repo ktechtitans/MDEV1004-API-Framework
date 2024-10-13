@@ -33,6 +33,9 @@ const postrecipe = async (req, res) => {
     }
 }
 
+
+
+
  //Delete a single recipes by Id
  const deleteRecipe = async(req,res) =>{
     try{
@@ -48,8 +51,6 @@ const postrecipe = async (req, res) => {
         res.status(500).send('Error deleting the Recipes');
     }
     };
-
-
 
 //Update recipes by Id
 const updateRecipe = async(req,res) =>{
@@ -67,5 +68,20 @@ const updateRecipe = async(req,res) =>{
     }
     };
 
+const getRecipeonId = async(req,res) =>{
+        try{
+            const Recipe = await recipes.findById(req.params.id);
+            if(!recipes){
+                return res.status(404).send('Recipe is not found');
+            }
+            res.status(201).json(Recipe);
+        
+        }
+        catch(e){
+            console.error(e);
+            res.status(500).send('Error retrieving the Recipe');
+        }
+        };
+
 // Export the controller functions for use in the routes
-module.exports = {getRecipe, postrecipe, deleteRecipe, updateRecipe};
+module.exports = {getRecipe, postrecipe, deleteRecipe, updateRecipe, getRecipeonId};
