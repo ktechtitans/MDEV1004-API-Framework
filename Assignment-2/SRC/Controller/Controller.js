@@ -1,3 +1,4 @@
+const Recipe = require('../Models/recipe');
 const recipes = require ('../Models/Recipe');
 
 const getRecipe = async (req, res) => {
@@ -32,6 +33,22 @@ const postrecipe = async (req, res) => {
         res.status(400).json({ message: 'Request Unsuccessfull', error: error.message });
     }
 }
+
+ //Delete a single recipes by Id
+ exports.deleteRecipe = async(req,res) =>{
+    try{
+        const deletedRecipe = await recipes.findByIdAndDelete(req.params.id);
+        if(!deletedRecipe){
+            return res.status(404).send('Recipe not found');
+        }
+        res.status(201).json(deletedRecipe);
+    
+    }
+    catch(e){
+        console.error(e);
+        res.status(500).send('Error deleting the Recipes');
+    }
+    };
 
 // Export the controller functions for use in the routes
 module.exports = {getRecipe, postrecipe};
