@@ -58,3 +58,5 @@ const loginUser = async (req, res) => {
       res.status(200).json({ message: "Logout successful" });
     });
   };
+
+  module.exports = { registerUser, loginUser, logoutUser };
