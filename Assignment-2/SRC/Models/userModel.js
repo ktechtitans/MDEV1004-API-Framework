@@ -14,4 +14,9 @@ const UserSchema = new mongoose.Schema({
     next();
   });
   
+  UserSchema.methods.isValidPassword = function (password) {
+    return bcrypt.compare(password, this.password);
+  };
   
+  
+ 
