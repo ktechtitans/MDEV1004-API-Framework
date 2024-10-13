@@ -49,5 +49,23 @@ const postrecipe = async (req, res) => {
     }
     };
 
+
+
+//Update recipes by Id
+const updateRecipe = async(req,res) =>{
+    try{
+        const updatedRecipe = await recipes.findByIdAndUpdate(req.params.id,req.body,{new:true});
+        if(!updatedRecipe){
+            return res.status(404).send('Recipe is not updated');
+        }
+        res.status(201).json(updatedRecipe);
+    
+    }
+    catch(e){
+        console.error(e);
+        res.status(500).send('Error updating the Recipes');
+    }
+    };
+
 // Export the controller functions for use in the routes
-module.exports = {getRecipe, postrecipe, deleteRecipe };
+module.exports = {getRecipe, postrecipe, deleteRecipe, updateRecipe};
