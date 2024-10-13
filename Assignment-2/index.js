@@ -24,6 +24,15 @@ mongoose.connect(mongoURI,{
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
+// Configure the express-session middleware
+app.use(
+    session({
+        secret: "Kanchan",
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+
 // Use the imported routes for handling requests
 app.use('/',routes);
 
