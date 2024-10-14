@@ -1,3 +1,9 @@
+/**
+ * File: recipe.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 13-10-24
+ */
 const mongoose = require('mongoose');// Import Mongoose library for MongoDB interaction
 const Schema = mongoose.Schema;// Alias for mongoose.Schema
 

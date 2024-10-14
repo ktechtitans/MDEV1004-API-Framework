@@ -1,8 +1,16 @@
+/**
+ * File: index.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 13-10-24
+ */
 // Import libraries and modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./SRC/Route/route');
+const session = require('express-session')
+const authRoutes = require('./SRC/Route/userRoute');
 
 //Initialize the express app
 const app = express();
