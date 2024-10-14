@@ -7,7 +7,7 @@
 const mongoose = require('mongoose');// Import Mongoose library for MongoDB interaction
 const Schema = mongoose.Schema;// Alias for mongoose.Schema
 
-
+// Define the Recipe schema with the required fields and their types
 const RecipeSchema = new mongoose.Schema({
     recipeName: { type: String, required: true },
     ingredients: { type: [String], required: true }, 
