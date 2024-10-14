@@ -1,3 +1,9 @@
+/**
+ * File: userRoute.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 13-10-24
+ */
 const express = require("express");
 const router = express.Router();
 const {
@@ -7,8 +13,8 @@ const {
 } = require("../Controller/userController");
 
 //registering routes here
-router.post("api/register", registerUser);
-router.post("/api/login", loginUser);
-router.post("/api/logout", logoutUser);
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.post("/logout", logoutUser);
 
 module.exports = router; //exporting router
