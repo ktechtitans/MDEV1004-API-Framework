@@ -1,3 +1,9 @@
+/**
+ * File: userModel.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 13-10-24
+ */
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 

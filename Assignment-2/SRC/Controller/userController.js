@@ -1,3 +1,9 @@
+/**
+ * File: userController.js
+ * Student Name: Kanchandeep Kaur
+ * Student ID: 200603165
+ * Date: 13-10-24
+ */
 const User = require("../Models/userModel");
 
 
